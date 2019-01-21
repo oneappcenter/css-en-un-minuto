@@ -7,7 +7,7 @@ publicado: 23 de enero de 2019
 <img src="images/default.png" width=1024 alt="Estructura por default">
 
 ### Estructura en estado Hover
-Cuando el mouse pase sobre el botoón se muestra el primer circulo.
+Cuando el mouse pase sobre el botón se muestra el primer circulo.
 <img src="images/hover.png" width=1024 alt="Estado hover">
 
 ### Estructura en estado Active
