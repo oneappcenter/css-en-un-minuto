@@ -1,5 +1,5 @@
 # Botón de colores
-publicado: 23 de enero de 2019
+Publicado: 23 de enero de 2019
 
 ## Descripción gráfica de la estructura del botón
 
