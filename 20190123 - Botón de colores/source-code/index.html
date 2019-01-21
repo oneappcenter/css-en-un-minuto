@@ -1,0 +1,91 @@
+<!--
+    CSS en un minuto
+    Botón de colores
+    23 de enero de 2019
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi webapp</title>
+    <style>
+        /* Estilo del botón */
+        .btn {
+            position:relative;
+            background:none;
+            border:none;
+            outline:none;
+            padding: 6px 7px;
+            border-radius: 5px;
+            background-color: #00d4ff;
+            overflow:hidden;
+        }
+
+        /* Primer circulo */
+        .btn::before {
+            content:"";
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:0;
+            height:0;
+            background-color:#ff4ac9;
+            border-radius:50%;
+            z-index:0;
+            transition: width 0.3s, height 0.3s;
+        }
+
+        /* Segundo circulo */
+        .btn::after {
+            content:"";
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:0;
+            height:0;
+            background-color:#30ff7c;
+            border-radius:50%;
+            z-index:1;
+            transition: width 0.3s, height 0.3s;
+        }
+
+        /* El texto siempre se debe mostrar sobre todos los elementos */
+        .btn span {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* El texto cambia de color cuando el mouse pasa sobre el botón */
+        .btn:hover {
+            color:white;
+        }
+
+        /* El primer circulo se muestra cuando el mouse pasa sobre el botón */
+        .btn:hover::before {
+            width:100px;
+            height:100px;
+        }
+
+        /* El texto cambia de color cuando se hace click sobre el botón */
+        .btn:active {
+            color:black;
+        }
+
+        /* El segundo circulo se muestra cuando se hace click sobre el botón */
+        .btn:active::after {
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">
+        <span>¡Haz click!</span>
+    </button>
+</body>
+</html>
